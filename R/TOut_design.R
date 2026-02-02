@@ -57,7 +57,7 @@ tout_design <-  function(rho_0, rho_1, alpha_nom, beta_nom, gamma_nom = 1, eta_0
   
   if(is.null(max_n)){
     # Get sample size for standard two outcome design taking a normal approx
-    # and making conservative assumption on variance (maximised at rho = 0.5 for binary case)
+    # and making conservative assumption on variance (maximised at rho = 0.5 for binary case )
     if(is.null(sigma)){ 
       n_two <- 0.25*(stats::qnorm(1 - alpha_nom) - stats::qnorm(beta_nom))^2/(rho_1 - rho_0)^2
     } else {
